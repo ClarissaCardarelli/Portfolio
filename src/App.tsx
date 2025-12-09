@@ -1,7 +1,15 @@
+import { Outlet } from "react-router";
+import Nav from "./components/nav";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <Nav />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
     </>
   );
 }
