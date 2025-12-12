@@ -15,8 +15,11 @@ function Nav() {
           </a>
         </li>
         <li>
-          <a href="" download className="body-text nav-link btn orange-btn">
-            <i className="bi bi-file-earmark-arrow-down btn-icon" />
+          <a href="#" download className="body-text btn orange-btn">
+            <i
+              className="bi bi-file-earmark-arrow-down btn-icon"
+              aria-hidden="true"
+            />
             Mon CV
           </a>
         </li>

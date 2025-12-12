@@ -9,7 +9,7 @@ function Hero() {
         <h2>Développeur Full Stack</h2>
         <p className="body-text">
           Polyvalente et adaptable, je relève des défis, explore de nouvelles
-          idées et m’investis pleinement dans chaque projet
+          idées et m'investis pleinement dans chaque projet
         </p>
         <div className="hero-buttons-container">
           <a
@@ -29,13 +29,13 @@ function Hero() {
             <i className="bi bi-linkedin btn-icon" aria-hidden="true" />
             Linkedin
           </a>
-          <button type="button" className="body-text btn orange-btn">
+          <a href="#" download className="body-text btn orange-btn">
             <i
               className="bi bi-file-earmark-arrow-down btn-icon"
               aria-hidden="true"
             />
             Télécharger CV
-          </button>
+          </a>
         </div>
       </section>
     </header>
