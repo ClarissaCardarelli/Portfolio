@@ -8,9 +8,8 @@ function Hero() {
         <h1 className="primary-title gradient-text">Clarissa Cardarelli</h1>
         <h2>Développeur Full Stack</h2>
         <p className="body-text">
-          Je suis une passionnée de création d'expériences web esthétiques et
-          conviviales. Je suis prête à apporter de nouvelles perspectives et des
-          solutions créatives à votre équipe.
+          Polyvalente et adaptable, je relève des défis, explore de nouvelles
+          idées et m’investis pleinement dans chaque projet
         </p>
         <div className="hero-buttons-container">
           <a

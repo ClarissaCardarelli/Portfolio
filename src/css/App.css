@@ -15,7 +15,7 @@
 	font-weight: var(--font-weight-h2);
     letter-spacing: var(--letter-spacing-h1);
     text-align: center;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .body-text {
@@ -23,7 +23,7 @@
 	font-size: var(--font-size-text);
 	font-weight: var(--font-weight-text);
     line-height: var(--line-height-text);
-    max-width: 65ch;
+    max-width: 55ch;
 }
 
 .gradient-text {
