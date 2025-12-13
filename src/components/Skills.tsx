@@ -1,33 +1,84 @@
+import { useState } from "react";
 import "../css/Skills.css";
+import FilterButton from "./FilterButton";
 import HardSkillCard from "./HardSkillCard";
 
 function Skills() {
   const allSkills = [
-    { icon: "devicon:html5", skill: "HTML" },
-    { icon: "devicon:css3", skill: "CSS" },
-    { icon: "devicon:javascript", skill: "JavaScript" },
-    { icon: "devicon:typescript", skill: "TypeScript" },
-    { icon: "devicon:react", skill: "React" },
-    { icon: "devicon:nodejs", skill: "Node.js" },
-    { icon: "devicon:express", skill: "Express" },
-    { icon: "devicon:mysql", skill: "MySQL" },
-    { icon: "devicon:git", skill: "Git" },
-    { icon: "devicon:github", skill: "GitHub" },
-    // { icon: "devicon:docker", skill: "Docker" },
-    { icon: "devicon:figma", skill: "Figma" },
+    { icon: "devicon:html5", skill: "HTML", category: "Front" },
+    { icon: "devicon:css3", skill: "CSS", category: "Front" },
+    { icon: "devicon:javascript", skill: "JavaScript", category: "Front" },
+    { icon: "devicon:typescript", skill: "TypeScript", category: "Front" },
+    { icon: "devicon:react", skill: "React", category: "Front" },
+    // { icon: "devicon:nextjs", skill: "Next.js", category: "Frontend" },
+    // { icon: "devicon:tailwindcss", skill: "Tailwind CSS", category: "Frontend" },
+
+    { icon: "devicon:nodejs", skill: "Node.js", category: "Back" },
+    { icon: "devicon:express", skill: "Express", category: "Back" },
+    { icon: "devicon:mysql", skill: "MySQL", category: "Back" },
+    // { icon: "devicon:postgresql", skill: "PostgreSQL", category: "Backend" },
+    { icon: "mdi:api", skill: "REST APIs", category: "Back" },
+
+    { icon: "devicon:git", skill: "Git", category: "Tools" },
+    { icon: "devicon:github", skill: "GitHub", category: "Tools" },
+    { icon: "devicon:vscode", skill: "VS Code", category: "Tools" },
+    // { icon: "devicon:docker", skill: "Docker", category: "Tools" },
+    { icon: "devicon:figma", skill: "Figma", category: "Design" },
   ];
+
+  const filterBtns = [
+    {
+      name: "Tous",
+      value: "",
+    },
+    {
+      name: "Frontend",
+      value: "Front",
+    },
+    {
+      name: "Backend",
+      value: "Back",
+    },
+    {
+      name: "Outils & Design",
+      value: "Autre",
+    },
+  ];
+
+  const [filter, setFilter] = useState("");
 
   return (
     <section id="skills">
       <h2 className="secondary-title">
         Mes <span className="gradient-text">Compétences</span>
       </h2>
-
-      <div className="skill-container">
-        {allSkills.map((s) => (
-          <HardSkillCard key={s.skill} skill={s.skill} icon={s.icon} />
+      <div className="filter-buttons-container">
+        {filterBtns.map((skill) => (
+          <FilterButton
+            className={
+              filter == skill.value
+                ? "body-text filter-button active"
+                : "body-text filter-button"
+            }
+            text={skill.name}
+            value={skill.value}
+            handleFilterUpdate={setFilter}
+          />
         ))}
       </div>
+      <div className="hard-skills-container">
+        {allSkills
+          .filter((skill) => {
+            if (filter === "Autre") {
+              return skill.category === "Tools" || skill.category === "Design";
+            }
+            return !filter || skill.category === filter;
+          })
+          .map((s) => (
+            <HardSkillCard key={s.skill} skill={s.skill} icon={s.icon} />
+          ))}
+      </div>
+      <div className="soft-skills-container"></div>
     </section>
   );
 }

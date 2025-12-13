@@ -24,7 +24,7 @@ section{
 	font-weight: var(--font-weight-h2);
     letter-spacing: var(--letter-spacing-h1);
     text-align: center;
-    padding: 4rem 0;
+    padding: 4rem 0 2rem;
 }
 
 .body-text {
