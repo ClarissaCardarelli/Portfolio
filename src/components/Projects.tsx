@@ -7,14 +7,18 @@ function Projects() {
       title: "Projet en cours",
       description:
         "Un cahier de liaison digital. Front office et back office permettant de mettre en relation les parents et les enseignants.",
-      tags: ["React", "CSS", "Express"],
+      tags: ["React", "TypeScript", "CSS", "Express"],
       image: "../src/assets/images/clay-banks-lGWmTzCyEB8-unsplash.jpg",
+      ghLink: "",
+      demo: "",
     },
     {
       title: "Purrrfect Brews",
       description: "lorem",
-      tags: ["React", "CSS", "Express"],
+      tags: ["React", "TypeScript", "CSS", "Express"],
       image: "../src/assets/images/clay-banks-lGWmTzCyEB8-unsplash.jpg",
+      ghLink: "https://www.google.com",
+      demo: "",
     },
     {
       title: "CinéMood",
@@ -22,6 +26,8 @@ function Projects() {
         "Recommandations de films personnalisées via un quiz interactif, accompagnées d'un catalogue de films consultable.",
       tags: ["React", "TypeScript", "CSS"],
       image: "../src/assets/images/clay-banks-lGWmTzCyEB8-unsplash.jpg",
+      ghLink: "https://github.com/ClarissaCardarelli/Cinemood",
+      demo: "https://www.google.com",
     },
     {
       title: "Portfolio",
@@ -29,6 +35,8 @@ function Projects() {
         "Ce site. Présentation de mes projets, compétences et expérience en tant que développeur web.",
       tags: ["React", "TypeScript", "CSS"],
       image: "../src/assets/images/clay-banks-lGWmTzCyEB8-unsplash.jpg",
+      ghLink: "https://github.com/ClarissaCardarelli/Portfolio",
+      demo: "",
     },
   ];
 
