@@ -4,7 +4,12 @@ function ProjectCard({
   return (
     <div className="project-card">
       <div className="project-img-container">
-        <img src={image} alt="hello" />
+        {image ? (
+          <img src={image} alt="" />
+        ) : (
+          <p className="secondary-title temp-project">Projet en cours</p>
+        )}
+
         <div className="project-links-container">
           {demo && (
             <a

@@ -1,55 +1,44 @@
 import "../css/Projects.css";
+import projects from "../data/Projects_data.tsx";
 import ProjectCard from "./ProjectCard";
+// import { EmblaOptionsType } from "embla-carousel";
+import useEmblaCarousel from "embla-carousel-react";
 
 function Projects() {
-  const projects = [
-    {
-      title: "Projet en cours",
-      description:
-        "Un cahier de liaison digital. Front office et back office permettant de mettre en relation les parents et les enseignants.",
-      tags: ["React", "TypeScript", "CSS", "Express"],
-      image: "../src/assets/images/clay-banks-lGWmTzCyEB8-unsplash.jpg",
-      ghLink: "",
-      demo: "",
-    },
-    {
-      title: "Purrrfect Brews",
-      description: "lorem",
-      tags: ["React", "TypeScript", "CSS", "Express"],
-      image: "../src/assets/images/clay-banks-lGWmTzCyEB8-unsplash.jpg",
-      ghLink: "https://www.google.com",
-      demo: "",
-    },
-    {
-      title: "CinéMood",
-      description:
-        "Recommandations de films personnalisées via un quiz interactif, accompagnées d'un catalogue de films consultable.",
-      tags: ["React", "TypeScript", "CSS"],
-      image: "../src/assets/images/clay-banks-lGWmTzCyEB8-unsplash.jpg",
-      ghLink: "https://github.com/ClarissaCardarelli/Cinemood",
-      demo: "https://www.google.com",
-    },
-    {
-      title: "Portfolio",
-      description:
-        "Ce site. Présentation de mes projets, compétences et expérience en tant que développeur web.",
-      tags: ["React", "TypeScript", "CSS"],
-      image: "../src/assets/images/clay-banks-lGWmTzCyEB8-unsplash.jpg",
-      ghLink: "https://github.com/ClarissaCardarelli/Portfolio",
-      demo: "",
-    },
-  ];
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   return (
     <section id="projects">
       <h2 className="secondary-title">
         Mes <span className="gradient-text">Projets</span>
       </h2>
-      <div className="project-card-container">
-        {projects.map((p) => (
-          <ProjectCard key={p.title} project={p} />
-        ))}
-      </div>
+
+      <section className="project-card-container">
+        <div className="embla__viewport" ref={emblaRef}>
+          <div className="embla__container">
+            {projects.map((p) => (
+              <div className="embla__slide" key={p.title}>
+                <ProjectCard project={p} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <button
+        type="button"
+        className="carousel-arrow left"
+        onClick={() => emblaApi?.scrollPrev()}
+      >
+        prev
+      </button>
+      <button
+        type="button"
+        className="carousel-arrow right"
+        onClick={() => emblaApi?.scrollNext()}
+      >
+        next
+      </button>
     </section>
   );
 }

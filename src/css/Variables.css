@@ -3,7 +3,9 @@
     --primary-dark:#374151;
     --accent-orange: #F97316;
     --accent-teal: #0D9488;
+    --accent-teal-light: rgba(20, 123, 99, 0.2);
     --accent-blue: #1E3A8A;
+    --accent-blue-light: rgba(24, 70, 144, 0.2);
     --gradient-text: linear-gradient(90deg, var(--accent-teal) 0%, var(--accent-blue) 100%);
 }
 

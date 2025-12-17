@@ -13,7 +13,7 @@
 .filter-button{
     min-width: 150px;
     cursor: pointer;
-    background-color: rgba(20, 123, 99, 0.2);
+    background-color: var(--accent-teal-light);
     border: none;
     border-radius: 2rem;
     padding: 0.2em 1em;
@@ -25,10 +25,11 @@
 }
 
 .active{
-    font-weight: var(--font-weight-text-strong);
-    background-color: var(--accent-teal);
+    background: var(--gradient-text);
     color:var(--primary-light);
+    font-weight: var(--font-weight-text-strong);
     border: 1px solid var(--primary-light);
+
 }
 
 .hard-skills-container{
