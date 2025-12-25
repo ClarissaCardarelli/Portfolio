@@ -32,7 +32,7 @@
 
 .project-card-container{ 
   margin: 0 auto;
-  width: 65%;
+  max-width: 1200px; 
 }
 
 .project-card{
@@ -158,3 +158,46 @@
   font-size: 2rem;
   cursor: pointer;
 }
+
+
+@media (max-width: 480px){
+
+  .embla__slide {
+    flex: 0 0 100%;
+    padding: 0 0.5rem;
+  }
+
+  .project-card-container {
+    width: 90%;
+  }
+
+
+
+
+
+  /* .tags {
+    gap: 0.3em;
+    padding: 1rem 0;
+  }
+
+  .tag {
+    padding: 0.2em 0.5em;
+    font-size: 0.75rem;
+  } */
+
+
+  /* .project-link {
+    padding: 0.4em 0.8em;
+    font-size: 0.8rem;
+  } 
+
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+  }  */
+}
+

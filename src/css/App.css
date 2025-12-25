@@ -95,3 +95,17 @@ section{
     color: var(--primary-light);
     background-color: var(--accent-orange);
 }
+
+
+
+@media (max-width: 480px){
+
+.secondary-title {
+    padding: 2rem 0;
+}
+
+.secondary-title::after {
+    top: calc(80%);
+}
+
+}

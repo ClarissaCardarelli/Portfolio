@@ -18,3 +18,15 @@
     
     --letter-spacing-h1: -0.03em;
 }
+
+
+@media (max-width: 480px) {
+
+  :root {
+    --font-size-h1: 3rem;   
+    --font-size-h2: 1.5rem; 
+    --font-size-h3: 1.2rem; 
+    --font-size-text: 0.8rem; 
+  }
+
+}
