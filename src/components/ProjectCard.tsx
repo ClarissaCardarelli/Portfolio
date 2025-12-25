@@ -1,8 +1,19 @@
 import { useLanguage } from "../context/LanguageContext";
 
+interface ProjectCardProps {
+  project: {
+    title: string;
+    description: string;
+    tags: string[];
+    image: string;
+    ghLink: string;
+    demo: string;
+  };
+}
+
 function ProjectCard({
   project: { title, description, tags, image, ghLink, demo },
-}) {
+}: ProjectCardProps) {
   const { t } = useLanguage();
   return (
     <div className="project-card">

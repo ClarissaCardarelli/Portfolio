@@ -1,6 +1,11 @@
 import { Icon } from "@iconify/react";
 
-function HardSkillCard({ skill, icon }) {
+interface HardSkillCardProps {
+  skill: string;
+  icon: string;
+}
+
+function HardSkillCard({ skill, icon }: HardSkillCardProps) {
   return (
     <div className="hard-skill-card">
       <Icon icon={icon} className="skill-icon" />
