@@ -1,5 +1,4 @@
 import "../css/About.css";
-import profile_photo from "../assets/images/Cv_photo_transparent.png";
 import { useLanguage } from "../context/LanguageContext";
 
 function About() {
@@ -13,7 +12,10 @@ function About() {
       <div className="about-container">
         <div className="photo-container">
           <div className="photo-frame">
-            <img src={profile_photo} alt="" />
+            <img
+              src="images/Cv_photo_transparent.png"
+              alt="Clarissa Cardarelli profile photo"
+            />
           </div>
         </div>
         <div className="about-text-container">
