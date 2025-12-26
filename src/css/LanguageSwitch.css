@@ -1,0 +1,46 @@
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+.language-dropdown button {
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-dropdown button img,
+.language-dropdown .dropdown-menu div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.language-dropdown .dropdown-menu {
+  position: absolute;
+  top: 50px;
+  left: -8px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  z-index: 100;
+}
+
+.language-dropdown .dropdown-menu div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}

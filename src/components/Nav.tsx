@@ -1,8 +1,9 @@
 import "../css/Nav.css";
 import { useLanguage } from "../context/LanguageContext";
+import LanguageSwitch from "./LanguageSwitch";
 
 function Nav() {
-  const { t, toggleLanguage, lang } = useLanguage();
+  const { t } = useLanguage();
   return (
     <nav className="nav">
       <ul>
@@ -25,12 +26,8 @@ function Nav() {
             {t.nav.cv}
           </a>
         </li>
-        <li>
-          <button onClick={toggleLanguage}>
-            {lang === "fr" ? "EN" : "FR"}
-          </button>
-        </li>
       </ul>
+      <LanguageSwitch />
     </nav>
   );
 }
