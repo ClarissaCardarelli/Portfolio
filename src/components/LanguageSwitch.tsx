@@ -30,7 +30,7 @@ function LanguageSwitch() {
 
       {open && (
         <div className="dropdown-menu">
-          {["fr", "en"]
+          {(["fr", "en"] as Language[])
             .filter((l) => l !== lang)
             .map((l) => (
               <div key={l} onClick={() => handleSelect(l)}>
