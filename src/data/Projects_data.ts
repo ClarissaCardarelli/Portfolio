@@ -3,7 +3,7 @@ const Projects_data = [
     title: "Purrfect Brews",
     descriptionKey: "description1",
     tags: ["Next.js", "TypeScript", "Tailwind"],
-    image: "images/Purrfect_Brews_screen.png",
+    image: "/images/Purrfect_Brews_screen.png",
     ghLink: "",
     demo: "",
   },
