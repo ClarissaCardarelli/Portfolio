@@ -107,6 +107,7 @@
     text-decoration: none;
     font-weight: var(--font-weight-text-strong);
 }
+
 .project-link i{
   padding-right: 0.5em; 
 }

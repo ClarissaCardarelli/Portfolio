@@ -26,14 +26,7 @@ function ProjectCard({
 
         <div className="project-links-container">
           {!demo && !ghLink && (
-            <a
-              href={demo}
-              className="body-text project-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t.projects.noLinks}
-            </a>
+            <span className="body-text project-link">{t.projects.noLinks}</span>
           )}
 
           {demo && (
