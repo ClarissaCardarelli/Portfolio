@@ -139,7 +139,6 @@
     border: none;
     border-radius: 2rem;
     padding: 0.2em 1em;
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .temp-project{
@@ -160,16 +159,6 @@
   cursor: pointer;
 }
 
-
-
-@media (max-width: 1024px){
-
-  .embla__slide {
-    flex: 0 0 33%;
-
-  }
-
-}
 
 @media (max-width: 1024px){
 
@@ -193,25 +182,34 @@
 
   .embla__slide {
     flex: 0 0 80%;
-  }
-
-}
-
-@media (max-width: 375px){
-
-  .project-img-container{
-    min-height: 40%;
-  }
-
-}
-
-
-@media (max-width: 320px) {
-
-  .embla__slide {
-    flex: 0 0 90%;
     padding: 0 0.3rem;
   }
 
+}
+
+@media (max-width: 400px){
+
+  .embla__slide {
+    flex: 0 0 85%;
+    padding: 0 0.3rem;
+  }
+
+  .project-img-container{
+    min-height: 45%;
+  }
+
+  .tag{
+    padding: 0.1em 0.5em;
+  }
+
+}
+
+
+@media (max-width: 333px) {
+
+  .embla__slide {
+    flex: 0 0 90%;
+
+  }
 
 }
